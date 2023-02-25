@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
+import { useEffect } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    let patterArray = [1, 2, 3, 4, 5];
+
+    patterArray.map((item) => {
+      let result = "";
+      for (let num = 1; num <= item; num++) {
+        result += 5 - item + 1;
+      }
+      console.log(result);
+    });
+  }, []);
+
+  return;
+
+  <div className="App"></div>;
 }
 
 export default App;
